@@ -7,5 +7,5 @@ IDE(Intellij IDEA) - git
 WAS(tomcat)
 JDK 8
 DB(mariaDB)
-DB client(Heidio SQL)
+DB client(Heidi SQL)
 AWS(?)
