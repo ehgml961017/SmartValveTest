@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/gas_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="138dp"
+        android:layout_marginBottom="31dp"
+        android:text="@string/main_title"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/switch_burning"
+        app:layout_constraintStart_toStartOf="@+id/switch_burning"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_burning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="23dp"
+        android:text="@string/burning_switch"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@+id/switch_gas"
+        app:layout_constraintStart_toStartOf="@+id/switch_gas"
+        app:layout_constraintTop_toBottomOf="@+id/gas_title" />
+
+    <Switch
+        android:id="@+id/switch_gas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginBottom="185dp"
+        android:text="@string/gas_valve"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_burning" />
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/log_name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/log_body"
+        app:layout_constraintEnd_toStartOf="@+id/button_more"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/log_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="213dp"
+        android:text="마지막 사용내역:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/log"
+        app:layout_constraintTop_toBottomOf="@+id/button_more" />
+
+    <Button
+        android:id="@+id/button_more"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/more"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/log_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/log"
+        app:layout_constraintTop_toBottomOf="@+id/switch_gas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
